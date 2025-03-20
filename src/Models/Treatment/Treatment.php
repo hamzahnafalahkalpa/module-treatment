@@ -2,13 +2,14 @@
 
 namespace Gilanggustina\ModuleTreatment\Models\Treatment;
 
-use Gii\ModuleService\Models\Service;
+use Hanafalah\ModuleService\Models\Service;
 use Gilanggustina\ModuleTreatment\Resources\Treatment\ShowTreatment;
 use Gilanggustina\ModuleTreatment\Resources\Treatment\ViewTreatment;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Zahzah\LaravelHasProps\Concerns\HasProps;
+use Hanafalah\LaravelHasProps\Concerns\HasProps;
 
-class Treatment extends Service{
+class Treatment extends Service
+{
     use SoftDeletes, HasProps;
 
     protected $table = 'services';
@@ -17,41 +18,47 @@ class Treatment extends Service{
         'name'       => 'string',
     ];
 
-    protected static function booted(): void{
+    protected static function booted(): void
+    {
         parent::booted();
-        static::creating(function($query){
-            if (!isset($query->treatment_code)){
+        static::creating(function ($query) {
+            if (!isset($query->treatment_code)) {
                 $query->treatment_code = static::hasEncoding('TREATMENT');
             }
         });
     }
 
-    public function getForeignKey(){
+    public function getForeignKey()
+    {
         return 'service_id';
     }
 
-    public function toViewApi(){
+    public function toViewApi()
+    {
         return new ViewTreatment($this);
     }
 
-    public function toShowApi(){
+    public function toShowApi()
+    {
         return new ShowTreatment($this);
     }
 
-    public function hasService(){
+    public function hasService()
+    {
         $service_model = $this->TreatmentModel();
         $service_table = $service_model->getTableName();
         return $this->hasOneThroughModel(
             'Service',
             'ModelHasService',
-            $service_table.'.reference_id',
+            $service_table . '.reference_id',
             $service_model->getKeyName(),
             $this->getKeyName(),
             $service_model->getForeignKey()
-        )->where($service_table.'.reference_type',$this->getMorphClass());
+        )->where($service_table . '.reference_type', $this->getMorphClass());
     }
 
-    public function childs(){
-        return $this->hasManyModel('Treatment','parent_id')->with('childs');
+    public function childs()
+    {
+        return $this->hasManyModel('Treatment', 'parent_id')->with('childs');
     }
 }

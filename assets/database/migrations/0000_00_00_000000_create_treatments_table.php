@@ -8,11 +8,12 @@ use Gilanggustina\ModuleTreatment\Models\Treatment\Treatment;
 
 return new class extends Migration
 {
-   use Zahzah\LaravelSupport\Concerns\NowYouSeeMe;
+    use Hanafalah\LaravelSupport\Concerns\NowYouSeeMe;
 
     private $__table;
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->__table = app(config('database.models.Treatment', Treatment::class));
     }
 
@@ -24,28 +25,28 @@ return new class extends Migration
     public function up(): void
     {
         $table_name = $this->__table->getTable();
-        if (!$this->isTableExists()){
+        if (!$this->isTableExists()) {
             Schema::create($table_name, function (Blueprint $table) {
                 $table->id();
-                $table->string('uuid',36)->index()->nullable(false);
+                $table->string('uuid', 36)->index()->nullable(false);
                 $table->string('name')->nullable(false);
-                $table->string('reference_type',50)->nullable(false);
-                $table->string('reference_id',36)->nullable(false);
+                $table->string('reference_type', 50)->nullable(false);
+                $table->string('reference_id', 36)->nullable(false);
                 $table->unsignedTinyInteger('status')->default(TreatmentStatus::DRAFT->value)
-                      ->nullable(false);
+                    ->nullable(false);
                 $table->unsignedTinyInteger('flag')->nullable(false);
                 $table->json('props')->nullable();
                 $table->timestamps();
                 $table->softDeletes();
 
-                $table->index(['reference_type','reference_id']);
+                $table->index(['reference_type', 'reference_id']);
             });
 
-            Schema::table($table_name,function (Blueprint $table){
-                $table->foreignIdFor($this->__table::class,'parent_id')
-                      ->nullable()->after('id')
-                      ->index()->constrained()
-                      ->cascadeOnUpdate()->restrictOnDelete();
+            Schema::table($table_name, function (Blueprint $table) {
+                $table->foreignIdFor($this->__table::class, 'parent_id')
+                    ->nullable()->after('id')
+                    ->index()->constrained()
+                    ->cascadeOnUpdate()->restrictOnDelete();
             });
         }
     }

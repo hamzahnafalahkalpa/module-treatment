@@ -2,9 +2,6 @@
 
 namespace Gilanggustina\ModuleTreatment\Contracts;
 
-use Zahzah\LaravelSupport\Contracts\DataManagement;
+use Hanafalah\LaravelSupport\Contracts\DataManagement;
 
-interface ModuleTreatment extends DataManagement
-{
-
-}
+interface ModuleTreatment extends DataManagement {}

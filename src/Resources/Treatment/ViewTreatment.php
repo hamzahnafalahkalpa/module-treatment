@@ -2,9 +2,10 @@
 
 namespace Gilanggustina\ModuleTreatment\Resources\Treatment;
 
-use Gii\ModuleService\Resources\ViewService;
+use Hanafalah\ModuleService\Resources\ViewService;
 
-class ViewTreatment extends ViewService{
+class ViewTreatment extends ViewService
+{
 
     /**
      * Transform the resource into an array.
@@ -14,11 +15,9 @@ class ViewTreatment extends ViewService{
      */
     public function toArray(\Illuminate\Http\Request $request): array
     {
-        $arr = [
-            
-        ];
-        $arr = $this->mergeArray(parent::toArray($request),$arr);
-        
+        $arr = [];
+        $arr = $this->mergeArray(parent::toArray($request), $arr);
+
         return $arr;
     }
 }

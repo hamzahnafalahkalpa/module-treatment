@@ -2,9 +2,10 @@
 
 namespace Gilanggustina\ModuleTreatment\Supports;
 
-use Zahzah\LaravelSupport\Supports\PackageManagement;
+use Hanafalah\LaravelSupport\Supports\PackageManagement;
 
-class BaseModuleTreatment extends PackageManagement{
+class BaseModuleTreatment extends PackageManagement
+{
     /** @var array */
     protected $__module_treatment_config = [];
 
@@ -15,7 +16,8 @@ class BaseModuleTreatment extends PackageManagement{
      * @throws Exception description of exception
      * @return void
      */
-    public function __construct(){
-        $this->setConfig('module-treatment',$this->__module_treatment_config);
-    }    
-}   
+    public function __construct()
+    {
+        $this->setConfig('module-treatment', $this->__module_treatment_config);
+    }
+}
