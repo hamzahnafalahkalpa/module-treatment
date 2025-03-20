@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Gilanggustina\ModuleTreatment;
+namespace Hanafalah\ModuleTreatment;
 
 use Hanafalah\LaravelSupport\Providers\BaseServiceProvider;
 
-use Gilanggustina\ModuleTreatment\Schemas\{
+use Hanafalah\ModuleTreatment\Schemas\{
     Treatment
 };
-use Gilanggustina\ModuleTreatment\Models\Treatment\Treatment as TreatmentModel;
+use Hanafalah\ModuleTreatment\Models\Treatment\Treatment as TreatmentModel;
 
 class ModuleTreatmentServiceProvider extends BaseServiceProvider
 {

@@ -1,9 +1,7 @@
 <?php
 
-namespace Gilanggustina\ModuleTreatment;
+namespace Hanafalah\ModuleTreatment;
 
-use Gilanggustina\ModuleTreatment\Supports\BaseModuleTreatment;
+use Hanafalah\ModuleTreatment\Supports\BaseModuleTreatment;
 
-class ModuleTreatment extends BaseModuleTreatment{
-  
-}
+class ModuleTreatment extends BaseModuleTreatment {}

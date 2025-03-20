@@ -1,7 +1,7 @@
-<?php 
+<?php
 
-use Gilanggustina\ModuleTreatment\Models as ModuleTreatmentModels;
-use Gilanggustina\ModuleTreatment\Commands as ModuleTreatmentCommands;
+use Hanafalah\ModuleTreatment\Models as ModuleTreatmentModels;
+use Hanafalah\ModuleTreatment\Commands as ModuleTreatmentCommands;
 
 return [
     'commands' => [

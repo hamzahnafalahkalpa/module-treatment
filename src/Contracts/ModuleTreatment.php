@@ -1,6 +1,6 @@
 <?php
 
-namespace Gilanggustina\ModuleTreatment\Contracts;
+namespace Hanafalah\ModuleTreatment\Contracts;
 
 use Hanafalah\LaravelSupport\Contracts\DataManagement;
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace Gilanggustina\ModuleTreatment\Schemas;
+namespace Hanafalah\ModuleTreatment\Schemas;
 
 use Hanafalah\ModuleService\Schemas\Service;
 use Illuminate\Database\Eloquent\Builder;
-use Gilanggustina\ModuleTreatment\Contracts;
+use Hanafalah\ModuleTreatment\Contracts;
 use Illuminate\Database\Eloquent\Collection;
-use Gilanggustina\ModuleTreatment\Resources\Treatment\{
+use Hanafalah\ModuleTreatment\Resources\Treatment\{
     ViewTreatment,
     ShowTreatment
 };

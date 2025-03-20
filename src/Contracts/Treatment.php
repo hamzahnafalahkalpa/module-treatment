@@ -1,6 +1,6 @@
 <?php
 
-namespace Gilanggustina\ModuleTreatment\Contracts;
+namespace Hanafalah\ModuleTreatment\Contracts;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;

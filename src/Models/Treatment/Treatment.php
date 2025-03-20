@@ -1,10 +1,10 @@
 <?php
 
-namespace Gilanggustina\ModuleTreatment\Models\Treatment;
+namespace Hanafalah\ModuleTreatment\Models\Treatment;
 
 use Hanafalah\ModuleService\Models\Service;
-use Gilanggustina\ModuleTreatment\Resources\Treatment\ShowTreatment;
-use Gilanggustina\ModuleTreatment\Resources\Treatment\ViewTreatment;
+use Hanafalah\ModuleTreatment\Resources\Treatment\ShowTreatment;
+use Hanafalah\ModuleTreatment\Resources\Treatment\ViewTreatment;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Hanafalah\LaravelHasProps\Concerns\HasProps;
 

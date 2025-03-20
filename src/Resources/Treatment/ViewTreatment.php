@@ -1,6 +1,6 @@
 <?php
 
-namespace Gilanggustina\ModuleTreatment\Resources\Treatment;
+namespace Hanafalah\ModuleTreatment\Resources\Treatment;
 
 use Hanafalah\ModuleService\Resources\ViewService;
 

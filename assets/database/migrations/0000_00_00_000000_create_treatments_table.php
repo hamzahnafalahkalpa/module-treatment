@@ -1,10 +1,10 @@
 <?php
 
-use Gilanggustina\ModuleTreatment\Enums\Treatment\TreatmentStatus;
+use Hanafalah\ModuleTreatment\Enums\Treatment\TreatmentStatus;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Gilanggustina\ModuleTreatment\Models\Treatment\Treatment;
+use Hanafalah\ModuleTreatment\Models\Treatment\Treatment;
 
 return new class extends Migration
 {

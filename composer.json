@@ -1,8 +1,8 @@
 {
-    "name": "gilanggustina/module-treatment",
+    "name": "hanafalah/module-treatment",
     "autoload": {
         "psr-4": {
-            "Gilanggustina\\ModuleTreatment\\": "src/"
+            "Hanafalah\\ModuleTreatment\\": "src/"
         }
     },
     "authors": [
@@ -14,7 +14,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Gilanggustina\\ModuleTreatment\\ModuleTreatmentServiceProvider"
+                "Hanafalah\\ModuleTreatment\\ModuleTreatmentServiceProvider"
             ]
         }
     },

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Gilanggustina\ModuleTreatment\Providers;
+namespace Hanafalah\ModuleTreatment\Providers;
 
-use Gilanggustina\ModuleTreatment\Commands;
+use Hanafalah\ModuleTreatment\Commands;
 use Illuminate\Support\ServiceProvider;
 
 class CommandServiceProvider extends ServiceProvider
@@ -14,8 +14,9 @@ class CommandServiceProvider extends ServiceProvider
     ];
 
 
-    public function register(){
-        $this->commands(config('module-treatment.commands',$this->commands));
+    public function register()
+    {
+        $this->commands(config('module-treatment.commands', $this->commands));
     }
     /**
      * Get the services provided by the provider.

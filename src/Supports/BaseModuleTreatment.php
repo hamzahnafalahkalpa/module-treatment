@@ -1,6 +1,6 @@
 <?php
 
-namespace Gilanggustina\ModuleTreatment\Supports;
+namespace Hanafalah\ModuleTreatment\Supports;
 
 use Hanafalah\LaravelSupport\Supports\PackageManagement;
 

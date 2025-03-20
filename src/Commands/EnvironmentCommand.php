@@ -1,6 +1,6 @@
 <?php
 
-namespace Gilanggustina\ModuleTreatment\Commands;
+namespace Hanafalah\ModuleTreatment\Commands;
 
 use Hanafalah\LaravelSupport\{
     Commands\BaseCommand

@@ -1,8 +1,9 @@
 <?php
 
-namespace Gilanggustina\ModuleTreatment\Enums\Treatment;
+namespace Hanafalah\ModuleTreatment\Enums\Treatment;
 
-enum TreatmentStatus: int{
+enum TreatmentStatus: int
+{
     case DRAFT    = 0;
     case ACTIVE   = 1;
     case INACTIVE = 2;
