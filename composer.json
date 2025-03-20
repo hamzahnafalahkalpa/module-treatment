@@ -1,0 +1,28 @@
+{
+    "name": "gilanggustina/module-treatment",
+    "autoload": {
+        "psr-4": {
+            "Gilanggustina\\ModuleTreatment\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "gilang",
+            "email": "cgg01082000@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Gilanggustina\\ModuleTreatment\\ModuleTreatmentServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "zahzah/laravel-support": "1.x",
+        "zahzah/module-transaction": "1.x",
+        "gii/module-service": "1.x"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false
+}
