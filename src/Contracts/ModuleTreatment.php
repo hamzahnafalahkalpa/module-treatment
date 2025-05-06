@@ -2,6 +2,6 @@
 
 namespace Hanafalah\ModuleTreatment\Contracts;
 
-use Hanafalah\LaravelSupport\Contracts\DataManagement;
+use Hanafalah\LaravelSupport\Contracts\Supports\DataManagement;
 
 interface ModuleTreatment extends DataManagement {}
