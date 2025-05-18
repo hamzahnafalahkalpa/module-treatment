@@ -33,14 +33,14 @@ class Treatment extends Service
         return 'service_id';
     }
 
-    public function toViewApi()
+    public function getViewResource()
     {
-        return new ViewTreatment($this);
+        return ViewTreatment::class;
     }
 
-    public function toShowApi()
+    public function getShowResource()
     {
-        return new ShowTreatment($this);
+        return ShowTreatment::class;
     }
 
     public function hasService()
