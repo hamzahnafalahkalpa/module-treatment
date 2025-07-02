@@ -25,18 +25,9 @@ class Treatment extends Service
         return 'service_id';
     }
 
-    public function getViewResource()
-    {
-        return ViewTreatment::class;
-    }
-
-    public function getShowResource()
-    {
-        return ShowTreatment::class;
-    }
-
-    public function hasService()
-    {
+    public function getViewResource(){return ViewTreatment::class;}
+    public function getShowResource(){return ShowTreatment::class;}
+    public function hasService(){
         $service_model = $this->TreatmentModel();
         $service_table = $service_model->getTableName();
         return $this->hasOneThroughModel(
@@ -49,8 +40,5 @@ class Treatment extends Service
         )->where($service_table . '.reference_type', $this->getMorphClass());
     }
 
-    public function childs()
-    {
-        return $this->hasManyModel('Treatment', 'parent_id')->with('childs');
-    }
+    public function childs(){return $this->hasManyModel('Treatment', 'parent_id')->with('childs');}
 }

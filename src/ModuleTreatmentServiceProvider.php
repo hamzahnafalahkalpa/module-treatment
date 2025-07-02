@@ -22,16 +22,7 @@ class ModuleTreatmentServiceProvider extends BaseServiceProvider
     {
         $this->registerMainClass(ModuleTreatment::class)
             ->registerCommandService(Providers\CommandServiceProvider::class)
-            ->registers([
-                '*',
-                'Services' => function () {
-                    $this->binds([
-                        // Contracts\ModuleTreatment::class => new Treatment(),
-                        Contracts\ModuleTreatment::class => new TreatmentModel(),
-                        Contracts\Treatment::class       => new Treatment()
-                    ]);
-                }
-            ]);
+            ->registers(['*']);
     }
 
     /**

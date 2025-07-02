@@ -16,8 +16,8 @@ class ShowTreatment extends ShowService
     public function toArray(\Illuminate\Http\Request $request): array
     {
         $arr = [];
-        $arr = $this->mergeArray(parent::toArray($request), $arr);
-
+        $show = $this->resolveNow(new ShowService($this));
+        $arr = $this->mergeArray(parent::toArray($request),$show,$arr);
         return $arr;
     }
 }

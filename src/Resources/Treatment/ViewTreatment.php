@@ -17,7 +17,6 @@ class ViewTreatment extends ViewService
     {
         $arr = [];
         $arr = $this->mergeArray(parent::toArray($request), $arr);
-
         return $arr;
     }
 }
