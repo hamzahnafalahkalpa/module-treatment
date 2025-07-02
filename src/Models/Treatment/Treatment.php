@@ -5,31 +5,23 @@ namespace Hanafalah\ModuleTreatment\Models\Treatment;
 use Hanafalah\ModuleService\Models\Service;
 use Hanafalah\ModuleTreatment\Resources\Treatment\ShowTreatment;
 use Hanafalah\ModuleTreatment\Resources\Treatment\ViewTreatment;
-use Illuminate\Database\Eloquent\SoftDeletes;
-use Hanafalah\LaravelHasProps\Concerns\HasProps;
 
 class Treatment extends Service
 {
-    use SoftDeletes, HasProps;
-
     protected $table = 'services';
 
     protected $casts = [
-        'name'       => 'string',
+        'name' => 'string',
     ];
 
-    protected static function booted(): void
-    {
+    protected static function booted(): void{
         parent::booted();
         static::creating(function ($query) {
-            if (!isset($query->treatment_code)) {
-                $query->treatment_code = static::hasEncoding('TREATMENT');
-            }
+            $query->treatment_code ??= static::hasEncoding('TREATMENT');
         });
     }
 
-    public function getForeignKey()
-    {
+    public function getForeignKey(){
         return 'service_id';
     }
 

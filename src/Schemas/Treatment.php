@@ -17,11 +17,6 @@ class Treatment extends Service implements Contracts\Treatment
     protected string $__entity = 'Treatment';
     protected static $treatment_model;
 
-    protected array $__resources = [
-        'view' => ViewTreatment::class,
-        'show' => ShowTreatment::class
-    ];
-
     public function treatment(mixed $conditionals = null): Builder
     {
         $this->booting();
