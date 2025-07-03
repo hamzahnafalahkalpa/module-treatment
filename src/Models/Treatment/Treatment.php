@@ -12,7 +12,17 @@ class Treatment extends Service
 
     protected $casts = [
         'name' => 'string',
+        'treatement_code' => 'string',
+        'reference_service_label' => 'string'
     ];
+
+    public function getPropsQuery(): array
+    {
+        return [
+            'treatment_code' => 'props->treatment_code',
+            'reference_service_label' => 'props->prop_reference->prop_service_label->name'
+        ];
+    }
 
     protected static function booted(): void{
         parent::booted();
