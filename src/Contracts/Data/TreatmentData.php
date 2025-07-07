@@ -2,6 +2,6 @@
 
 namespace Hanafalah\ModuleTreatment\Contracts\Data;
 
-use Spatie\LaravelData\Contracts\BaseData;
+use Hanafalah\ModuleService\Contracts\Data\ServiceData;
 
-interface TreatmentData extends BaseData {}
+interface TreatmentData extends ServiceData {}

@@ -3,17 +3,16 @@
 namespace Hanafalah\ModuleTreatment\Schemas;
 
 use Hanafalah\ModuleService\Schemas\Service;
-use Illuminate\Database\Eloquent\Builder;
 use Hanafalah\ModuleTreatment\Contracts;
-use Illuminate\Database\Eloquent\Collection;
-use Hanafalah\ModuleTreatment\Resources\Treatment\{
-    ViewTreatment,
-    ShowTreatment
-};
-use Illuminate\Pagination\LengthAwarePaginator;
+use Hanafalah\ModuleTreatment\Contracts\Data\TreatmentData;
+use Illuminate\Database\Eloquent\Model;
 
 class Treatment extends Service implements Contracts\Schemas\Treatment
 {
     protected string $__entity = 'Treatment';
     protected static $treatment_model;
+
+    public function prepareStoreTreatment(TreatmentData $treatment_dto): Model{
+        return parent::prepareStoreService($treatment_dto);
+    }
 }

@@ -4,7 +4,7 @@ namespace Hanafalah\ModuleTreatment\Resources\Treatment;
 
 use Hanafalah\ModuleService\Resources\ShowService;
 
-class ShowTreatment extends ShowService
+class ShowTreatment extends ViewTreatment
 {
 
     /**
