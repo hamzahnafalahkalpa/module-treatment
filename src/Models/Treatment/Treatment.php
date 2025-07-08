@@ -13,7 +13,8 @@ class Treatment extends Service
     protected $casts = [
         'name' => 'string',
         'treatement_code' => 'string',
-        'reference_service_label' => 'string'
+        'reference_service_label' => 'string',
+        'reference_type' => 'string'
     ];
 
     public function getPropsQuery(): array
