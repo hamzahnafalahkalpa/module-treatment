@@ -29,6 +29,15 @@ class Treatment extends Service
         static::creating(function ($query) {
             $query->treatment_code ??= static::hasEncoding('TREATMENT');
         });
+        static::updated(function($query){
+            if ($query->isDirty('status')){
+                $query->load('childs');
+                foreach ($query->childs as $child) {
+                    $child->status = $query->status;
+                    $child->save();
+                }
+            }
+        });
     }
 
     public function getForeignKey(){
