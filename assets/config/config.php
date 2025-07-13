@@ -1,11 +1,22 @@
 <?php
 
-use Hanafalah\ModuleTreatment\Models as ModuleTreatmentModels;
 use Hanafalah\ModuleTreatment\Commands as ModuleTreatmentCommands;
 
 return [
-    'commands' => [
-        ModuleTreatmentCommands\InstallMakeCommand::class
+    'namespace' => 'Hanafalah\\ModuleTreatment',
+    'app' => [
+        'contracts' => [
+            //ADD YOUR CONTRACTS HERE
+        ],
+    ],
+    'libs' => [
+        'model' => 'Models',
+        'contract' => 'Contracts',
+        'schema' => 'Schemas',
+        'database' => 'Database',
+        'data' => 'Data',
+        'resource' => 'Resources',
+        'migration' => '../assets/database/migrations'
     ],
     'libs' => [
         'model' => 'Models',
@@ -13,7 +24,10 @@ return [
     ],
     'database' => [
         'models' => [
-            'Treatment'    => ModuleTreatmentModels\Treatment\Treatment::class
+            
         ]
+    ],
+    'commands' => [
+        ModuleTreatmentCommands\InstallMakeCommand::class
     ]
 ];
