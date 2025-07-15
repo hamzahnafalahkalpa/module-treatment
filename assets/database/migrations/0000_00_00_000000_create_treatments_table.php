@@ -1,6 +1,5 @@
 <?php
 
-use Hanafalah\ModuleTreatment\Enums\Treatment\TreatmentStatus;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -27,12 +26,12 @@ return new class extends Migration
         $table_name = $this->__table->getTable();
         if (!$this->isTableExists()) {
             Schema::create($table_name, function (Blueprint $table) {
-                $table->id();
+                $table->ulid('id')->primary();
                 $table->string('uuid', 36)->index()->nullable(false);
                 $table->string('name')->nullable(false);
                 $table->string('reference_type', 50)->nullable(false);
                 $table->string('reference_id', 36)->nullable(false);
-                $table->unsignedTinyInteger('status')->default(TreatmentStatus::DRAFT->value)
+                $table->unsignedTinyInteger('status')->default('DRAFT')
                     ->nullable(false);
                 $table->unsignedTinyInteger('flag')->nullable(false);
                 $table->json('props')->nullable();
