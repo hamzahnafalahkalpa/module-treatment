@@ -27,6 +27,9 @@ class Treatment extends Service
 
     protected static function booted(): void{
         parent::booted();
+        static::addGlobalScope('is_treatment',function($query){
+            $query->where('is_treatment',true);
+        });
         static::creating(function ($query) {
             $query->treatment_code ??= static::hasEncoding('TREATMENT');
         });
