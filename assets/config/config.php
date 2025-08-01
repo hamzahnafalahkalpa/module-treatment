@@ -29,5 +29,16 @@ return [
     ],
     'commands' => [
         ModuleTreatmentCommands\InstallMakeCommand::class
+    ],
+    'treatment_types' => [
+        'clinical_treatment' => [
+            'schema' => null
+        ],
+        'lab_treatment' => [
+            'schema' => null
+        ],
+        'radiology_treatment' => [
+            'schema' => null
+        ]
     ]
 ];
