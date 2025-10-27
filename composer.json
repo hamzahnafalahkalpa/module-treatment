@@ -11,13 +11,6 @@
             "email": "cgg01082000@gmail.com"
         }
     ],
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Hanafalah\\ModuleTreatment\\ModuleTreatmentServiceProvider"
-            ]
-        }
-    },
     "require": {
         "hanafalah/laravel-support": "dev-main",
         "hanafalah/module-transaction": "dev-main",
